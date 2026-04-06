@@ -2,7 +2,7 @@
 
 - [x] 1.1 Scaffold the Hono TypeScript backend, Vue 3 + Vite frontend, and Playwright/e2e workspace from the current empty directories.
 - [x] 1.2 Add project dependencies for Hono, `@hono/zod-openapi`, SQLite access, Vue, shadcn-vue, testing libraries, and supporting tooling.
-- [ ] 1.3 Establish shared environment/config conventions for local development and Docker Compose.
+- [x] 1.3 Establish shared environment/config conventions for local development and Docker Compose.
 
 ## 2. Persistence And Seed Data
 

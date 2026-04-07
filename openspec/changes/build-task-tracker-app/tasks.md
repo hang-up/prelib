@@ -6,9 +6,9 @@
 
 ## 2. Persistence And Seed Data
 
-- [ ] 2.1 Define the SQLite schema for `users` and `tasks` with supported task statuses.
-- [ ] 2.2 Implement database initialization and idempotent seed logic for two demo users and sample tasks.
-- [ ] 2.3 Wire persistent SQLite storage into the backend and containerized runtime.
+- [x] 2.1 Define the SQLite schema for `users` and `tasks` with supported task statuses.
+- [x] 2.2 Implement database initialization and idempotent seed logic for two demo users and sample tasks.
+- [x] 2.3 Wire persistent SQLite storage into the backend and containerized runtime.
 
 ## 3. Backend API
 
@@ -26,12 +26,12 @@
 
 ## 5. Local Runtime And Documentation
 
-- [ ] 5.1 Configure nginx as the Docker entrypoint routing frontend, API, and adminer services.
-- [ ] 5.2 Complete `docker-compose.yml` and `docker-compose.dist.yml` for the local development topology.
+- [x] 5.1 Configure nginx as the Docker entrypoint routing frontend, API, and adminer services.
+- [x] 5.2 Complete `docker-compose.yml` and `docker-compose.dist.yml` for the local development topology.
 - [ ] 5.3 Add `docs/TRADEOFFS.md` describing the intentional cuts and the rationale behind seeded auth, ownership rules, and omitted features.
 
 ## 6. Verification
 
-- [ ] 6.1 Add backend automated tests covering auth flows, validation, cross-user reads, and owner-only mutations.
-- [ ] 6.2 Add frontend unit tests for composables handling auth, task retrieval, task filtering, and task mutations.
+- [ ] 6.1 Add backend automated tests covering auth flows, validation, cross-user reads, and owner-only mutations. Keep it pragmatic and focused on the critical paths.
+- [ ] 6.2 Add frontend unit tests for composables handling auth, task retrieval, task filtering, and task mutations. Keep it pragmatic and focused on the critical paths.
 - [ ] 6.3 Add one Playwright happy-path workflow covering seeded login and a core task management flow if the stack remains stable enough for end-to-end coverage.

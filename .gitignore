@@ -8,4 +8,6 @@ test-results/
 .env
 .env.*
 !.env.example
-db/data/
+
+# In a real project, we would ignore the data directory.
+# db/data/*

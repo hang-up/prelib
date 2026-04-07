@@ -7,6 +7,7 @@ declare module "better-sqlite3" {
   class Statement<Result = unknown> {
     run(...params: unknown[]): StatementResult;
     get(...params: unknown[]): Result | undefined;
+    all(...params: unknown[]): Result[];
   }
 
   class Database {

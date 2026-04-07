@@ -11,8 +11,8 @@ docker compose up -d
 
 ## Notes
 
-- Default local setup uses `DISABLE_CORS=true` in [`docker-compose.yml`](/Users/robert.hang/Documents/webdev/personal/prelib/docker-compose.yml), so `http://localhost` works without editing `/etc/hosts`.
-- If you want strict origin checks with `prelib.localhost`, run:
+- Default local setup uses `DISABLE_CORS=true` in `docker-compose.yml`, so `http://localhost` works without editing `/etc/hosts`.
+> If you want strict origin checks with `prelib.localhost`, run:
 
 ```bash
 # Add the loopback to your /etc/hosts file
@@ -23,6 +23,12 @@ DISABLE_CORS=false docker compose up --build
 
 # Remove the loopback
 sudo sed -i '/prelib.localhost/d' /etc/hosts
+
+# Restart the stack
+docker compose down
+docker compose up -d
+
+# Open your browser to http://prelib.localhost
 ```
 
 - Stop the stack with `Ctrl+C`
@@ -55,4 +61,4 @@ npm test
 
 ## Tradeoffs
 
-Tradeoffs are documented in [docs/TRADEOFFS.md](/Users/robert.hang/Documents/webdev/personal/prelib/docs/TRADEOFFS.md).
+Tradeoffs are documented in [docs/TRADEOFFS.md](docs/TRADEOFFS.md).

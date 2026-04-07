@@ -26,10 +26,12 @@ services:
       context: ./backend
     command: npm run dev
     environment:
-      # TODO: Hide these defaults. Only expose DISABLE_CORS=true if reviewers don't want to touch their /etc/hosts file.
       HOST: 0.0.0.0
       PORT: 4200
       APP_ORIGIN: http://prelib.localhost
+      # Defaults to true so reviewers can use http://localhost without editing /etc/hosts.
+      # Set DISABLE_CORS=false once APP_ORIGIN resolves locally.
+      DISABLE_CORS: "${DISABLE_CORS:-true}"
       DATABASE_PATH: /data/task-tracker.sqlite
       AUTH_COOKIE_NAME: task_tracker_session
       CHOKIDAR_USEPOLLING: "true"
@@ -48,7 +50,6 @@ services:
       target: development-stage
     command: npm run dev
     environment:
-      # TODO: Hide these defaults. Only expose DISABLE_CORS=true if reviewers don't want to touch their /etc/hosts file.
       FRONTEND_HOST: 0.0.0.0
       FRONTEND_PORT: 6384
       VITE_APP_TITLE: Prelib Task Tracker

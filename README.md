@@ -2,10 +2,11 @@
 
 ## Get started
 
-- From the project root, start the stack:
-
 ```bash
-docker compose up --build
+cd frontend && npm ci
+cd backend && npm ci
+cd e2e && npm ci
+docker compose up -d
 ```
 
 ## Notes
